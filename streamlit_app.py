@@ -61,7 +61,7 @@ with tabs[1]:
     selected_metric_region = st.selectbox("분석 지표 선택 (지역별)", df_fire_region.columns[1:], key="fire_metric_region")
 
     df_region_filtered = df_fire_region[df_fire_region['구분'] == selected_region]
-    # 그래프
+    # 그래프 
     fig_region = px.bar(
         x=[selected_region],
         y=df_region_filtered[selected_metric_region],
